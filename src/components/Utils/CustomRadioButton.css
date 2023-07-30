@@ -1,0 +1,58 @@
+/* CustomRadioButton.css */
+.custom-radio {
+    position: relative;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 32px;
+    height: 32px;
+    border: #cccccc solid 1px;
+    background-color: #fff;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+
+.custom-radio .custom-radio-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+}
+
+.custom-radio-label {
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    border-color: #cccccc;
+    color: #888888;
+}
+
+.custom-radio:hover .custom-radio-input~.custom-radio-label {
+    background-color: #ccc;
+    color: #222222;
+}
+
+.custom-radio .custom-radio-input:checked~.custom-radio-label {
+    color: #222222;
+}
+
+.custom-radio-label:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.custom-radio .custom-radio-input:checked~.custom-radio-label:after {
+    display: block;
+}
+
+.custom-radio .custom-radio-label:after {
+    height: 32px;
+    width: 32px;
+    border: #222222 solid 2px;
+}
