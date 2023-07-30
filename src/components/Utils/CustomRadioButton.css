@@ -20,39 +20,38 @@
     position: absolute;
     opacity: 0;
     cursor: pointer;
-    width: 32px;
-    height: 32px;
 }
 
-.custom-radio-label {
-    position: absolute;
-    height: 32px;
-    width: 32px;
-    border-color: #cccccc;
-    color: #888888;
-}
-
-.custom-radio:hover .custom-radio-input~.custom-radio-label {
-    background-color: #ccc;
-    color: #222222;
-}
-
-.custom-radio .custom-radio-input:checked~.custom-radio-label {
-    color: #222222;
-}
-
-.custom-radio-label:after {
-    content: "";
+.checkmark {
     position: absolute;
     display: none;
 }
 
-.custom-radio .custom-radio-input:checked~.custom-radio-label:after {
+.custom-radio-label {
+    position: absolute;
+    color: #888888;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Updated CSS selectors */
+.custom-radio:hover,
+.custom-radio:hover .custom-radio-label {
+    color: #222222;
+    border-color: #222222;
+}
+
+.custom-radio .custom-radio .custom-radio-input:checked~.checkmark {
+    color: #222222;
+    border: #222222 solid 2px;
     display: block;
 }
 
-.custom-radio .custom-radio-label:after {
+.custom-radio .checkmark {
+    top: 0;
+    left: 0;
     height: 32px;
     width: 32px;
-    border: #222222 solid 2px;
+    border: #cccccc solid 1px;
 }
